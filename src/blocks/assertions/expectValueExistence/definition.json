@@ -1,0 +1,36 @@
+{
+    "message0": "expect %1 %2 %3",
+    "args0": [
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_value",
+            "name": "lhs"
+        },
+        {
+            "type": "field_dropdown",
+            "name": "func",
+            "options": [
+                ["to be truthy", "toBeTruthy"],
+                ["to be defined", "toBeDefined"],
+                ["to be falsy", "toBeFalsy"],
+                ["to be null", "toBeNull"],
+                ["to be undefined", "toBeUndefined"],
+                ["to be NaN", "toBeNaN"],
+                ["not to be truthy", "not.toBeTruthy"],
+                ["not to be defined", "not.toBeDefined"],
+                ["not to be falsy", "not.toBeFalsy"],
+                ["not to be null", "not.toBeNull"],
+                ["not to be undefined", "not.toBeUndefined"],
+                ["not to be NaN", "not.toBeNaN"]
+            ]
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "colour": "#c2185b",
+    "tooltip": "Check if the provided value exists or not",
+    "helpUrl": "https://jestjs.io/docs/en/expect#reference"
+}

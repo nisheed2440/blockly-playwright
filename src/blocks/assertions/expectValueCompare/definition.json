@@ -1,0 +1,36 @@
+{
+    "message0": "expect %1 %2 %3 %4",
+    "args0": [
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_value",
+            "name": "lhs",
+            "check": "Number"
+        },
+        {
+            "type": "field_dropdown",
+            "name": "func",
+            "options": [
+                ["==", "toEqual"],
+                ["!=", "not.toEqual"],
+                [">", "toBeGreaterThan"],
+                [">=", "toBeGreaterThanOrEqual"],
+                ["<", "toBeLessThan"],
+                ["<=", "toBeLessThanOrEqual"]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "rhs",
+            "check": "Number"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "colour": "#c2185b",
+    "tooltip": "Assert the comparison of two values",
+    "helpUrl": "https://jestjs.io/docs/en/expect#reference"
+}
