@@ -1,3 +1,3 @@
-import './extensions/browserExtensions'
-import './extensions/stepExtensions'
-import './blocks/assertions'
+import './extensions/browserExtensions';
+import './extensions/stepExtensions';
+import './blocks/assertions';

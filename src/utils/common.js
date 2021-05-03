@@ -5,14 +5,14 @@
  * @return {Boolean} If parent exists.
  */
 export function checkParent(types = [], block) {
-    const parent = block.getSurroundParent()
+    const parent = block.getSurroundParent();
     if (parent) {
         if (types.indexOf(parent.type) > -1) {
-            return true
+            return true;
         }
-        return checkParent(types, parent)
+        return checkParent(types, parent);
     }
-    return false
+    return false;
 }
 
 /**
@@ -31,12 +31,12 @@ export function setBlockEnabled(
     Blockly
 ) {
     if (!block.isInFlyout) {
-        const group = Blockly.Events.getGroup()
+        const group = Blockly.Events.getGroup();
         // Makes it so the move and the disable event get undone together.
-        Blockly.Events.setGroup(e.group)
-        block.setEnabled(enabled)
-        block.setWarningText(!enabled ? warnMsg : null)
-        Blockly.Events.setGroup(group)
+        Blockly.Events.setGroup(e.group);
+        block.setEnabled(enabled);
+        block.setWarningText(!enabled ? warnMsg : null);
+        Blockly.Events.setGroup(group);
     }
 }
 
@@ -53,8 +53,8 @@ export function createCheckParentExtension(
 ) {
     return function () {
         this.setOnChange(function (e) {
-            const parentValid = checkParent(parentTypes, this)
-            setBlockEnabled(e, this, parentValid, warningMsg, Blockly)
-        })
-    }
+            const parentValid = checkParent(parentTypes, this);
+            setBlockEnabled(e, this, parentValid, warningMsg, Blockly);
+        });
+    };
 }

@@ -1,5 +1,5 @@
-import Blockly from 'blockly'
-import { createCheckParentExtension } from '../utils/common'
+import Blockly from 'blockly';
+import { createCheckParentExtension } from '../utils/common';
 
 Blockly.Extensions.register(
     'check_step_parent',
@@ -8,7 +8,7 @@ Blockly.Extensions.register(
         'Can only be attached to a page steps block',
         Blockly
     )
-)
+);
 
 Blockly.Extensions.register(
     'check_step_cookie_parent',
@@ -17,4 +17,4 @@ Blockly.Extensions.register(
         'Can only be used within an add cookies block',
         Blockly
     )
-)
+);

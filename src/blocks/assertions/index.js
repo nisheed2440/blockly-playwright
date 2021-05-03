@@ -1,3 +1,3 @@
-import './expectStringCompare'
-import './expectValueCompare'
-import './expectValueExistence'
+import './expectStringCompare';
+import './expectValueCompare';
+import './expectValueExistence';

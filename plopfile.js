@@ -27,6 +27,11 @@ module.exports = function (plop) {
                 path: 'src/blocks/{{type}}/{{camelCase name}}/index.js',
                 templateFile: 'templates/block.hbs',
             },
+            {
+                type: 'append',
+                path: 'src/blocks/{{type}}/index.js',
+                template: "import './{{camelCase name}}'",
+            },
         ], // array of actions
     });
 };

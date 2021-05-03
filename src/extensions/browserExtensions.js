@@ -1,5 +1,5 @@
-import Blockly from 'blockly'
-import { createCheckParentExtension } from '../utils/common'
+import Blockly from 'blockly';
+import { createCheckParentExtension } from '../utils/common';
 
 Blockly.Extensions.register(
     'check_settings_parent',
@@ -8,7 +8,7 @@ Blockly.Extensions.register(
         'Can only be attached to a browser settings block',
         Blockly
     )
-)
+);
 
 Blockly.Extensions.register(
     'check_tab_parent',
@@ -17,7 +17,7 @@ Blockly.Extensions.register(
         'Can only be used within a browser tabs block',
         Blockly
     )
-)
+);
 
 Blockly.Extensions.register(
     'check_setting_parent',
@@ -26,7 +26,7 @@ Blockly.Extensions.register(
         'Can only be used within a settings block',
         Blockly
     )
-)
+);
 
 Blockly.Extensions.register(
     'check_page_parent',
@@ -35,7 +35,7 @@ Blockly.Extensions.register(
         'Can only be used within a new tab block',
         Blockly
     )
-)
+);
 
 Blockly.Extensions.register(
     'check_header_parent',
@@ -44,7 +44,7 @@ Blockly.Extensions.register(
         'Can only be used within an add headers block',
         Blockly
     )
-)
+);
 Blockly.Extensions.register(
     'check_cookie_parent',
     createCheckParentExtension(
@@ -52,4 +52,4 @@ Blockly.Extensions.register(
         'Can only be used within an add cookies block',
         Blockly
     )
-)
+);
