@@ -1,0 +1,30 @@
+{
+    "message0": "browser %1 %2 settings %3 tabs %4",
+    "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "browser",
+            "options": [
+                ["chromium", "chromium"],
+                ["firefox", "firefox"],
+                ["webkit", "webkit"]
+            ]
+        },
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_statement",
+            "name": "settings",
+            "check": "setting"
+        },
+        {
+            "type": "input_statement",
+            "name": "tabs",
+            "check": "tab"
+        }
+    ],
+    "colour": "#26a69a",
+    "tooltip": "Create a new browser context",
+    "helpUrl": "https://playwright.dev/docs/api/class-browsercontext"
+}

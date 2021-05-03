@@ -1,0 +1,16 @@
+{
+    "message0": "init script path %1",
+    "args0": [
+        {
+            "type": "field_input",
+            "name": "path",
+            "text": "https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"
+        }
+    ],
+    "previousStatement": "setting",
+    "nextStatement": "setting",
+    "colour": "#00766c",
+    "tooltip": "Adds a script which would be evaluated",
+    "helpUrl": "https://playwright.dev/docs/api/class-browsercontext#browsercontextaddinitscriptscript-arg",
+    "extensions": ["check_setting_parent"]
+}

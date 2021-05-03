@@ -1,0 +1,20 @@
+{
+    "message0": "add headers %1 %2",
+    "args0": [
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_statement",
+            "name": "headers",
+            "check": "header"
+        }
+    ],
+    "inputsInline": false,
+    "previousStatement": "setting",
+    "nextStatement": "setting",
+    "colour": "#00766c",
+    "tooltip": "The extra HTTP header will be sent with every request initiated by any page in the context",
+    "helpUrl": "https://playwright.dev/docs/api/class-browsercontext#browsercontextsetextrahttpheadersheaders",
+    "extensions": ["check_setting_parent"]
+}

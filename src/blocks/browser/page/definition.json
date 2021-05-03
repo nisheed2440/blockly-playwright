@@ -1,0 +1,25 @@
+{
+    "message0": "go to url %1 %2 steps %3",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "url",
+            "check": "String"
+        },
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_statement",
+            "name": "steps",
+            "check": "step"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": "page",
+    "nextStatement": "page",
+    "colour": "#26a69a",
+    "tooltip": "Visit a page to run your tests",
+    "helpUrl": "https://playwright.dev/docs/api/class-page",
+    "extensions": ["check_page_parent"]
+}

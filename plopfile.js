@@ -30,7 +30,7 @@ module.exports = function (plop) {
             {
                 type: 'append',
                 path: 'src/blocks/{{type}}/index.js',
-                template: "import './{{camelCase name}}'",
+                template: "import './{{camelCase name}}';",
             },
         ], // array of actions
     });

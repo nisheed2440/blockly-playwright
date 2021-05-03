@@ -1,0 +1,9 @@
+{
+    "message0": "clear cookies",
+    "previousStatement": "setting",
+    "nextStatement": "setting",
+    "colour": "#00766c",
+    "tooltip": "Clears context cookies",
+    "helpUrl": "https://playwright.dev/docs/api/class-browsercontext#browsercontextclearcookies",
+    "extensions": ["check_setting_parent"]
+}

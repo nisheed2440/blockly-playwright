@@ -1,0 +1,21 @@
+{
+    "message0": "header name %1 value %2",
+    "args0": [
+        {
+            "type": "field_input",
+            "name": "name",
+            "text": "x-theia-header"
+        },
+        {
+            "type": "field_input",
+            "name": "value",
+            "text": "true"
+        }
+    ],
+    "previousStatement": "header",
+    "nextStatement": "header",
+    "colour": "#00766c",
+    "tooltip": "The header object to be added",
+    "helpUrl": "https://playwright.dev/docs/api/class-browsercontext#browsercontextsetextrahttpheadersheaders",
+    "extensions": ["check_setting_parent"]
+}

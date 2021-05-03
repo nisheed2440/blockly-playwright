@@ -1,0 +1,9 @@
+{
+    "message0": "clear permissions",
+    "previousStatement": "setting",
+    "nextStatement": "setting",
+    "colour": "#00766c",
+    "tooltip": "Clears all permission overrides for the browser context",
+    "helpUrl": "https://playwright.dev/docs/api/class-browsercontext#browsercontextclearpermissions",
+    "extensions": ["check_setting_parent"]
+}
