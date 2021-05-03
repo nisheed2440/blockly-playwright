@@ -1,0 +1,12 @@
+import Blockly from 'blockly'
+import definition from './definition.json'
+
+Blockly.Blocks.{{snakeCase name}} = {
+    init: function () {
+        this.jsonInit(definition);
+    },
+};
+
+Blockly.JavaScript.{{snakeCase name}} = (block) => {
+
+};
