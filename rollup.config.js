@@ -4,6 +4,7 @@ import json from '@rollup/plugin-json';
 import copy from 'rollup-plugin-copy';
 import { terser } from 'rollup-plugin-terser';
 import serve from 'rollup-plugin-serve';
+import scss from 'rollup-plugin-scss';
 import pkg from './package.json';
 
 export default [
@@ -37,7 +38,8 @@ export default [
             copy({
                 targets: [{ src: 'public/**/*', dest: 'dist' }],
             }),
-            serve('dist/demo'),
+            serve('dist'),
+            scss(),
         ],
     },
 ];

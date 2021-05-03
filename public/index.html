@@ -9,8 +9,30 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
         />
+        <link rel="stylesheet" href="./demo.css" />
     </head>
     <body>
+        <nav
+            class="navbar is-light"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <img
+                        src="https://bulma.io/images/bulma-logo.png"
+                        alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
+                        width="112"
+                        height="28"
+                    />
+                </a>
+            </div>
+        </nav>
+        <div id="app">
+            <div id="blockly-div-wrapper">
+                <div id="blockly-div"></div>
+            </div>
+        </div>
         <script src="https://unpkg.com/blockly/blockly.min.js"></script>
         <script src="./blockly-playwright.umd.js"></script>
         <script src="./demo.js"></script>
