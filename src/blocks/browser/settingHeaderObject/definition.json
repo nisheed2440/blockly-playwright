@@ -4,7 +4,7 @@
         {
             "type": "field_input",
             "name": "name",
-            "text": "x-theia-header"
+            "text": "x-blockly-header"
         },
         {
             "type": "field_input",

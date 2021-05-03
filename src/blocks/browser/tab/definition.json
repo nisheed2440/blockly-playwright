@@ -4,7 +4,7 @@
         {
             "type": "field_input",
             "name": "scenario",
-            "text": "Theia test scenario"
+            "text": "Test scenario"
         },
         {
             "type": "input_dummy"

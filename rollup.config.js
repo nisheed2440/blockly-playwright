@@ -1,7 +1,10 @@
-import resolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
-import json from '@rollup/plugin-json'
-import pkg from './package.json'
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
+import copy from 'rollup-plugin-copy';
+import { terser } from 'rollup-plugin-terser';
+import serve from 'rollup-plugin-serve';
+import pkg from './package.json';
 
 export default [
     {
@@ -12,7 +15,7 @@ export default [
             format: 'umd',
         },
         external: ['blockly'],
-        plugins: [resolve(), commonjs(), json()],
+        plugins: [resolve(), commonjs(), json(), terser()],
     },
     {
         input: 'src/index.js',
@@ -23,4 +26,18 @@ export default [
         ],
         plugins: [resolve(), json()],
     },
-]
+    {
+        input: 'src/demo.js',
+        output: {
+            file: 'dist/demo.js',
+            format: 'iife',
+        },
+        plugins: [
+            terser(),
+            copy({
+                targets: [{ src: 'public/**/*', dest: 'dist' }],
+            }),
+            serve('dist/demo'),
+        ],
+    },
+];
