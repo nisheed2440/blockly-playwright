@@ -1,0 +1,20 @@
+{
+    "message0": "add page cookies %1 %2",
+    "args0": [
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_statement",
+            "name": "cookies",
+            "check": "cookie"
+        }
+    ],
+    "inputsInline": false,
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "colour": "#0288D1",
+    "tooltip": "Adds cookies to the current page.",
+    "helpUrl": "https://playwright.dev/docs/api/class-browsercontext#browsercontextaddcookiescookies",
+    "extensions": ["check_step_parent"]
+}

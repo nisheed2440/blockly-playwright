@@ -1,0 +1,16 @@
+{
+    "message0": "focus on %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "selector",
+            "check": "String"
+        }
+    ],
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "colour": "#0288D1",
+    "tooltip": "Focus on a specific selector",
+    "helpUrl": "https://playwright.dev/docs/api/class-elementhandle#elementhandlefocus",
+    "extensions": ["check_step_parent"]
+}

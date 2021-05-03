@@ -1,0 +1,19 @@
+{
+    "message0": "get field %1 %2 value",
+    "args0": [
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_value",
+            "name": "selector",
+            "check": "String"
+        }
+    ],
+    "inputsInline": true,
+    "output": "String",
+    "colour": "#0288D1",
+    "tooltip": "Return the value of the specified selector",
+    "helpUrl": "https://playwright.dev/docs/api/class-elementhandle#elementhandletextcontent",
+    "extensions": ["check_step_parent"]
+}

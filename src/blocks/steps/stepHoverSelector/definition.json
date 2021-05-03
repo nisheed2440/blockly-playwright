@@ -1,0 +1,16 @@
+{
+    "message0": "hover on %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "selector",
+            "check": "String"
+        }
+    ],
+    "colour": "#0288D1",
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "tooltip": "Hover on a specific selector",
+    "helpUrl": "https://playwright.dev/docs/api/class-elementhandle#elementhandlehoveroptions",
+    "extensions": ["check_step_parent"]
+}

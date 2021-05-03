@@ -1,0 +1,26 @@
+{
+    "message0": "cookie name %1 value %2 secure %3",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "name",
+            "text": "cookie_name"
+        },
+        {
+            "type": "input_value",
+            "name": "value",
+            "text": "cookie_value"
+        },
+        {
+            "type": "field_checkbox",
+            "name": "secure",
+            "checked": false
+        }
+    ],
+    "previousStatement": "cookie",
+    "nextStatement": "cookie",
+    "colour": "#0288D1",
+    "tooltip": "The cookie object to be added",
+    "helpUrl": "https://playwright.dev/docs/api/class-browsercontext#browsercontextaddcookiescookies",
+    "extensions": ["check_step_cookie_parent"]
+}

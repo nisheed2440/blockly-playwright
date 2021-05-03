@@ -1,0 +1,9 @@
+{
+    "message0": "reload page",
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "colour": "#0288D1",
+    "tooltip": "Reloads the current page",
+    "helpUrl": "https://playwright.dev/docs/api/class-page#pagereloadoptions",
+    "extensions": ["check_step_parent"]
+}

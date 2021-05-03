@@ -1,0 +1,24 @@
+{
+    "message0": "%1 field %2",
+    "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "func",
+            "options": [
+                ["check", "check"],
+                ["uncheck", "uncheck"]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "selector",
+            "check": "String"
+        }
+    ],
+    "colour": "#0288D1",
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "tooltip": "Check or uncheck a checkbox/radio selector",
+    "helpUrl": "https://playwright.dev/docs/api/class-elementhandle#elementhandlecheckoptions",
+    "extensions": ["check_step_parent"]
+}

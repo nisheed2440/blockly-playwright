@@ -1,0 +1,25 @@
+{
+    "message0": "%1 click on %2",
+    "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "button",
+            "options": [
+                ["left", "left"],
+                ["right", "right"],
+                ["middle", "middle"]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "selector",
+            "check": "String"
+        }
+    ],
+    "colour": "#0288D1",
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "tooltip": "Click on a selector",
+    "helpUrl": "https://playwright.dev/docs/api/class-elementhandle/#elementhandleclickoptions",
+    "extensions": ["check_step_parent"]
+}

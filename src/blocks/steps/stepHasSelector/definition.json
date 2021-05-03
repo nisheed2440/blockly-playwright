@@ -1,0 +1,29 @@
+{
+    "message0": "has selector %1 %2 with state %3",
+    "args0": [
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_value",
+            "name": "selector",
+            "check": "String"
+        },
+        {
+            "type": "field_dropdown",
+            "name": "state",
+            "options": [
+                ["attached", "attached"],
+                ["detached", "detached"],
+                ["visible", "visible"],
+                ["hidden", "hidden"]
+            ]
+        }
+    ],
+    "inputsInline": true,
+    "output": "Boolean",
+    "colour": "#0288D1",
+    "tooltip": "Checks if the page has the specified selector",
+    "helpUrl": "https://playwright.dev/docs/api/class-page/#pagewaitforselectorselector-options",
+    "extensions": ["check_step_parent"]
+}

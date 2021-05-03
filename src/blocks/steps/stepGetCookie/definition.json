@@ -1,0 +1,15 @@
+{
+    "message0": "get cookie %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "name",
+            "check": "String"
+        }
+    ],
+    "output": "String",
+    "colour": "#0288D1",
+    "tooltip": "Get the value of a specific cookie",
+    "helpUrl": "https://playwright.dev/docs/api/class-browsercontext#browsercontextcookiesurls",
+    "extensions": ["check_step_parent"]
+}

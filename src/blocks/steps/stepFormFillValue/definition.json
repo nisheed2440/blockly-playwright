@@ -1,0 +1,22 @@
+{
+    "message0": "fill %2 in field %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "selector",
+            "check": "String"
+        },
+        {
+            "type": "input_value",
+            "name": "value",
+            "check": "String"
+        }
+    ],
+    "colour": "#0288D1",
+    "inputsInline": true,
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "tooltip": "Fill in the value for the specified selector",
+    "helpUrl": "https://playwright.dev/docs/api/class-elementhandle#elementhandlefillvalue-options",
+    "extensions": ["check_step_parent"]
+}

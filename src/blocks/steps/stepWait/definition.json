@@ -1,0 +1,20 @@
+{
+    "message0": "wait %1 seconds",
+    "args0": [
+        {
+            "type": "field_number",
+            "name": "seconds",
+            "value": 1,
+            "min": 0,
+            "max": 20,
+            "precision": 1
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "colour": "#0288D1",
+    "tooltip": "Wait for the specified number of seconds on the page",
+    "helpUrl": "https://playwright.dev/docs/api/class-page#pagewaitfortimeouttimeout",
+    "extensions": ["check_step_parent"]
+}

@@ -1,0 +1,9 @@
+{
+    "message0": "scroll to bottom",
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "colour": "#0288D1",
+    "tooltip": "Scrolls to the bottom of the page",
+    "helpUrl": "https://playwright.dev/docs/api/class-page#pageevaluatepagefunction-arg",
+    "extensions": ["check_step_parent"]
+}

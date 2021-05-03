@@ -1,0 +1,16 @@
+{
+    "message0": "press %1 on keyboard",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "button",
+            "check": "String"
+        }
+    ],
+    "colour": "#0288D1",
+    "previousStatement": "step",
+    "nextStatement": "step",
+    "tooltip": "Press specific key on the keyboard",
+    "helpUrl": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values",
+    "extensions": ["check_step_parent"]
+}

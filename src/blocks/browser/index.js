@@ -1,7 +1,6 @@
 import './context';
 import './page';
 import './settingAddCookie';
-
 import './settingAddHeaders';
 import './settingClearCookies';
 import './settingClearPermissions';
