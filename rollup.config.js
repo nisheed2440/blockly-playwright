@@ -28,6 +28,14 @@ export default [
         plugins: [resolve(), json()],
     },
     {
+        input: 'src/worker.js',
+        output: {
+            file: 'dist/worker.js',
+            format: 'iife',
+        },
+        plugins: [terser()],
+    },
+    {
         input: 'src/demo.js',
         output: {
             file: 'dist/demo.js',
