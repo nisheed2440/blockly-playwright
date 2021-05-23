@@ -33,7 +33,7 @@ export default [
             file: 'dist/worker.js',
             format: 'iife',
         },
-        plugins: [terser()],
+        plugins: [resolve(), json(), terser()],
     },
     {
         input: 'src/demo.js',
@@ -42,6 +42,8 @@ export default [
             format: 'iife',
         },
         plugins: [
+            resolve(),
+            json(),
             terser(),
             copy({
                 targets: [{ src: 'public/**/*', dest: 'dist' }],

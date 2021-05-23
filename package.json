@@ -18,7 +18,8 @@
         "rollup-plugin-copy": "^3.4.0",
         "rollup-plugin-scss": "^2.6.1",
         "rollup-plugin-serve": "^1.1.0",
-        "rollup-plugin-terser": "^7.0.2"
+        "rollup-plugin-terser": "^7.0.2",
+        "split.js": "^1.6.4"
     },
     "files": [
         "dist"

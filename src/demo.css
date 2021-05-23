@@ -1,6 +1,5 @@
 html,
-body,
-#app {
+body {
     width: 100vw;
     height: 100vh;
     min-width: 100vw;
@@ -11,14 +10,11 @@ body,
     overflow: hidden;
 }
 
-#app {
-    display: flex;
-    flex-direction: row;
-}
-
 #blockly-div-wrapper {
     position: relative;
     overflow: hidden;
+    height: 100%;
+    min-height: 100%;
 }
 
 #blockly-div {
@@ -27,4 +23,46 @@ body,
     position: absolute;
     top: 0;
     left: 0;
+}
+
+/* Split JS CSS */
+.split {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    min-height: 100%;
+}
+
+.gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    cursor: col-resize;
+}
+
+#split-1,
+#split-0 {
+    position: relative;
+}
+
+/* Code related CSS */
+#code-wrapper {
+    margin: 0;
+    height: 100%;
+}
+
+#code {
+    height: 100%;
+    overflow: auto;
+}
+
+/* Copy JS CSS */
+#copy {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }

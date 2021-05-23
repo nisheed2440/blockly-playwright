@@ -16,14 +16,20 @@
         <link rel="stylesheet" href="./demo.css" />
     </head>
     <body>
-        <div id="app" style="display: none">
-            <div id="blockly-div-wrapper">
-                <div id="blockly-div"></div>
+        <div class="split">
+            <div id="split-0">
+                <div id="blockly-div-wrapper">
+                    <div id="blockly-div"></div>
+                </div>
+            </div>
+            <div id="split-1">
+                <pre
+                    id="code-wrapper"
+                ><code id="code" class="language-typescript hljs"></code></pre>
+                <button id="copy">Copy Code</button>
             </div>
         </div>
-        <div>
-            <pre><code id="code" class="language-typescript hljs"></code></pre>
-        </div>
+        <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
         <script src="https://unpkg.com/blockly/blockly.min.js"></script>
         <script src="./blockly-playwright.umd.js"></script>
         <script src="./demo.js"></script>
