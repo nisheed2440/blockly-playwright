@@ -3,8 +3,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import copy from 'rollup-plugin-copy';
 import { terser } from 'rollup-plugin-terser';
-import serve from 'rollup-plugin-serve';
-import scss from 'rollup-plugin-scss';
 import postcss from 'rollup-plugin-postcss';
 import env from 'postcss-preset-env';
 import autoprefixer from 'autoprefixer';
@@ -63,8 +61,6 @@ export default [
             copy({
                 targets: [{ src: 'public/**/*', dest: 'dist' }],
             }),
-            serve('dist'),
-            // scss(),
         ],
     },
 ];

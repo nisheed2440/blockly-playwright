@@ -20,7 +20,7 @@ Demo playground can be found at -> [https://blockly-playwright.netlify.app/](htt
     ```
 -   Install the required dependencies
     ```
-    $ yarn add playwirght jest jest-html-reporters
+    $ yarn add playwright jest jest-html-reporters
     ```
 -   Create a `jest.config.js` file using
     ```
