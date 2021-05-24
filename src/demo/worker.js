@@ -5,9 +5,11 @@ importScripts(
 );
 
 const banner = `
+
 /**
  * Created using blockly-playwright
  */
+
 `;
 
 // Listen for changes from the main thread

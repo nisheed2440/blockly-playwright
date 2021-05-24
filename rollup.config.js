@@ -5,6 +5,9 @@ import copy from 'rollup-plugin-copy';
 import { terser } from 'rollup-plugin-terser';
 import serve from 'rollup-plugin-serve';
 import scss from 'rollup-plugin-scss';
+import postcss from 'rollup-plugin-postcss';
+import env from 'postcss-preset-env';
+import autoprefixer from 'autoprefixer';
 import pkg from './package.json';
 
 export default [
@@ -25,31 +28,43 @@ export default [
             { file: pkg.main, format: 'cjs' },
             { file: pkg.module, format: 'es' },
         ],
-        plugins: [resolve(), json()],
+        plugins: [resolve(), commonjs(), json()],
     },
     {
-        input: 'src/worker.js',
+        input: 'src/demo/worker.js',
         output: {
             file: 'dist/worker.js',
             format: 'iife',
         },
-        plugins: [resolve(), json(), terser()],
+        plugins: [resolve(), commonjs(), json(), terser()],
     },
     {
-        input: 'src/demo.js',
+        input: 'src/demo/demo.js',
         output: {
             file: 'dist/demo.js',
             format: 'iife',
         },
+        external: ['blockly'],
         plugins: [
+            postcss({
+                extract: true,
+                minimize: true,
+                plugins: [
+                    env({
+                        browsers: 'last 2 versions',
+                    }),
+                    autoprefixer(),
+                ],
+            }),
             resolve(),
+            commonjs(),
             json(),
             terser(),
             copy({
                 targets: [{ src: 'public/**/*', dest: 'dist' }],
             }),
             serve('dist'),
-            scss(),
+            // scss(),
         ],
     },
 ];

@@ -1,13 +1,13 @@
 import Blockly from 'blockly';
 import definition from './definition.json';
 
-Blockly.Blocks.setting_add_cookie = {
+Blockly.Blocks.setting_add_cookies = {
     init: function () {
         this.jsonInit(definition);
     },
 };
 
-Blockly.JavaScript.setting_add_cookie = (block) => {
+Blockly.JavaScript.setting_add_cookies = (block) => {
     const statements_cookies = Blockly.JavaScript.statementToCode(
         block,
         'cookies'

@@ -5,13 +5,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Blockly Playwright - Demo</title>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link rel="preconnect" href="https://unpkg.com" />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+        />
         <link
             rel="stylesheet"
             href="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/default.min.css"
         />
         <link
             rel="stylesheet"
-            href="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/codepen-embed.min.css"
+            href="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/obsidian.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
         />
         <link rel="stylesheet" href="./demo.css" />
     </head>
@@ -29,7 +44,256 @@
                 <button id="copy">Copy Code</button>
             </div>
         </div>
-        <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+        <xml
+            id="toolbox"
+            xmlns="https://developers.google.com/blockly/xml"
+            is="blockly"
+            style="display: none"
+        >
+            <category name="Browser" colour="#26a69a">
+                <label text="Core"></label>
+                <block type="context"></block>
+                <block type="tab"></block>
+                <block type="page">
+                    <value name="url">
+                        <shadow type="text">
+                            <field name="TEXT">http://www.google.com</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="context">
+                    <value name="tabs">
+                        <block type="tab">
+                            <value name="pages">
+                                <block type="page">
+                                    <value name="url">
+                                        <shadow type="text">
+                                            <field name="TEXT"
+                                                >http://www.google.com</field
+                                            >
+                                        </shadow>
+                                    </value>
+                                </block>
+                            </value>
+                        </block>
+                    </value>
+                </block>
+                <label text="Settings"></label>
+                <block type="setting_geolocation"></block>
+                <block type="setting_add_headers"></block>
+                <block type="setting_header_object"></block>
+                <block type="setting_add_cookies"></block>
+                <block type="setting_cookie_object"></block>
+                <block type="setting_clear_cookies"></block>
+                <block type="setting_grant_permissions"></block>
+                <block type="setting_permission_object"></block>
+                <block type="setting_clear_permissions"></block>
+                <block type="setting_init_script_content"></block>
+                <block type="setting_init_script_path"></block>
+                <block type="setting_offline"></block>
+            </category>
+            <category name="Page" colour="#0288D1">
+                <label text="Getters"></label>
+                <block type="step_get_cookie">
+                    <value name="name">
+                        <shadow type="text">
+                            <field name="TEXT">cookie</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_get_page_title"></block>
+                <block type="step_get_selector_count">
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">.btn</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_get_selector_value">
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">[name="testFirstname"]</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_get_selector_text">
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">.btn</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_has_selector">
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">.btn</field>
+                        </shadow>
+                    </value>
+                </block>
+                <label text="Setters"></label>
+                <block type="step_add_cookies"></block>
+                <block type="step_cookie_object">
+                    <value name="name">
+                        <shadow type="text">
+                            <field name="TEXT">cookie</field>
+                        </shadow>
+                    </value>
+                    <value name="value">
+                        <shadow type="text">
+                            <field name="TEXT">true</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_focus_selector">
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">.btn</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_form_check_value">
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">[name="Remember"]</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_form_clear_value">
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">[name="Firstname"]</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_form_fill_value">
+                    <value name="value">
+                        <shadow type="text">
+                            <field name="TEXT">test</field>
+                        </shadow>
+                    </value>
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">[name="testFirstname"]</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_form_select_value">
+                    <value name="value">
+                        <shadow type="text">
+                            <field name="TEXT">India</field>
+                        </shadow>
+                    </value>
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">[name="testCountry"]</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_form_type_value">
+                    <value name="value">
+                        <shadow type="text">
+                            <field name="TEXT">test</field>
+                        </shadow>
+                    </value>
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">[name="testFirstname"]</field>
+                        </shadow>
+                    </value>
+                </block>
+                <label text="Actions"></label>
+                <block type="step_click_selector">
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">.btn</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_hover_selector">
+                    <value name="selector">
+                        <shadow type="text">
+                            <field name="TEXT">.btn</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="step_reload_page"></block>
+                <block type="step_scroll_to_bottom"></block>
+                <block type="step_wait"></block>
+                <label text="Keyboard"></label>
+                <block type="step_press_keyboard_btn">
+                    <value name="button">
+                        <block type="text">
+                            <field name="TEXT">Enter</field>
+                        </block>
+                    </value>
+                </block>
+                <block type="step_press_keyboard_btn">
+                    <value name="button">
+                        <block type="text">
+                            <field name="TEXT">Tab</field>
+                        </block>
+                    </value>
+                </block>
+                <block type="step_press_keyboard_btn"></block>
+                <block type="step_key_down_keyboard"></block>
+                <block type="step_key_up_keyboard"></block>
+            </category>
+            <category name="Assertion" colour="#c2185b">
+                <block type="expect_string_compare"></block>
+                <block type="expect_value_compare"></block>
+                <block type="expect_value_existence"></block>
+            </category>
+            <sep></sep>
+            <category name="Logic" categorystyle="logic_category">
+                <block type="controls_if"></block>
+                <block type="logic_compare"></block>
+                <block type="logic_operation"></block>
+                <block type="logic_negate"></block>
+                <block type="logic_boolean"></block>
+                <block type="logic_null"></block>
+                <block type="logic_ternary"></block>
+            </category>
+            <category name="Text" categorystyle="text_category">
+                <block type="text"></block>
+                <block type="math_number"></block>
+                <block type="math_random_int"></block>
+                <block type="text_multiline"></block>
+                <block type="text_join"></block>
+                <block type="text_length"></block>
+                <block type="text_isEmpty"></block>
+                <block type="text_changeCase"></block>
+                <block type="text_trim"></block>
+                <block type="text_replace"></block>
+                <block type="text_reverse"></block>
+            </category>
+            <category name="Loops" categorystyle="loop_category">
+                <block type="controls_repeat"></block>
+                <block type="controls_whileUntil"></block>
+                <block type="controls_for"></block>
+                <block type="controls_forEach"></block>
+                <block type="controls_flow_statements"></block>
+            </category>
+            <category name="Lists" categorystyle="list_category">
+                <block type="lists_create_with"></block>
+                <block type="lists_repeat"></block>
+                <block type="lists_length"></block>
+                <block type="lists_isEmpty"></block>
+                <block type="lists_indexOf"></block>
+                <block type="lists_getIndex"></block>
+                <block type="lists_setIndex"></block>
+                <block type="lists_getSublist"></block>
+                <block type="lists_split"></block>
+                <block type="lists_sort"></block>
+                <block type="lists_reverse"></block>
+            </category>
+            <category
+                colour="330"
+                custom="VARIABLE"
+                name="Variables"
+            ></category>
+        </xml>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script src="https://unpkg.com/blockly/blockly.min.js"></script>
         <script src="./blockly-playwright.umd.js"></script>
         <script src="./demo.js"></script>
