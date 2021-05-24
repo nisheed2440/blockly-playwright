@@ -2,7 +2,7 @@
 
 ---
 
-Blockly blocks for [Microsoft Playswright](https://playwright.dev/) for creating e2e tests powered by [Jest](https://jestjs.io/)
+[Blockly](https://developers.google.com/blockly/) blocks for [Microsoft Playwright](https://playwright.dev/) for visually creating e2e tests powered by [Jest](https://jestjs.io/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6875e2ec-3442-4963-9ab4-4ebd7e4c1b80/deploy-status)](https://app.netlify.com/sites/blockly-playwright/deploys)
 
