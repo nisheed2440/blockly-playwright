@@ -42,6 +42,7 @@ body,
 
 .demo-app {
     flex: 1;
+    overflow: hidden;
 }
 
 #blockly-div-wrapper {
