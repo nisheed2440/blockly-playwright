@@ -53,18 +53,32 @@
         <link rel="stylesheet" href="./demo.css" />
     </head>
     <body>
-        <div class="split">
-            <div id="split-0">
-                <div id="blockly-div-wrapper">
-                    <div id="blockly-div"></div>
+        <div class="container">
+            <header class="demo-header">
+                <div class="demo-title">Blockly Playwright - Playground</div>
+                <div class="demo-subtitle">
+                    <a
+                        target="_blank"
+                        href="https://github.com/nisheed2440/blockly-playwright#setup-local-development-enviroment"
+                        >Local Setup</a
+                    >
                 </div>
-            </div>
-            <div id="split-1">
-                <pre
-                    id="code-wrapper"
-                ><code id="code" class="language-typescript hljs"></code></pre>
-                <button id="copy">Copy Code</button>
-            </div>
+            </header>
+            <main class="demo-app">
+                <div class="split">
+                    <div id="split-0">
+                        <div id="blockly-div-wrapper">
+                            <div id="blockly-div"></div>
+                        </div>
+                    </div>
+                    <div id="split-1">
+                        <pre
+                            id="code-wrapper"
+                        ><code id="code" class="language-typescript hljs"></code></pre>
+                        <button id="copy">Copy Code</button>
+                    </div>
+                </div>
+            </main>
         </div>
         <xml
             id="toolbox"
