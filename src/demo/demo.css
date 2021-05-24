@@ -121,6 +121,7 @@ body,
 #split-1,
 #split-0 {
     position: relative;
+    width: 50%;
 }
 
 /* Code related CSS */

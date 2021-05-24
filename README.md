@@ -56,6 +56,6 @@ Demo playground can be found at -> [https://blockly-playwright.netlify.app/](htt
 -   Create you end-to-end test using the [playground](https://blockly-playwright.netlify.app/).
 -   Copy the generated code using the "Copy Code" button in the playground and paste it into the `__tests__/01-hello-world.spec.js` file.
 -   Run the test using `yarn test --coverage`.
--   Once the test completes you should be able to see a `jest_html_reporters.html` file create in the root directory with the test results.
+-   Once the test completes you should be able to see a `jest_html_reporters.html` file created in the root directory with the test results.
 
 ![Coverage](/public/coverage.png)
