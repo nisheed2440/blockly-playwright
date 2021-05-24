@@ -35,7 +35,7 @@ Demo playground can be found at -> [https://blockly-playwright.netlify.app/](htt
     coverageDirectory: 'coverage',
     ...
     // Use this configuration option to add custom reporters to Jest
-    reporters: ['default', 'jest-html-reporters'],
+    reporters: ['jest-html-reporters'],
     ...
      // The test environment that will be used for testing
     testEnvironment: 'node',
